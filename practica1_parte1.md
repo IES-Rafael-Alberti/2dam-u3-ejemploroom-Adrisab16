@@ -128,7 +128,7 @@
 
 3. **Diálogo creador de las tareas.**
 
-    3.1. Lo primero que vamos a hacer es introducir las dependencias necesarias para trabajar con ***LiveData*** en `build.gradle.kts (Module)` y volvemos a sincronizar ***(Sync Now)***:
+    3.1. Lo primero que vamos a hacer es introducir las dependencias necesarias para trabajar con ***LiveData*** en `build.gradle.kts (Module)` y volvemos a sincronizar ***(Sync Now)***: -Check-
 
     ```
     dependencies {
@@ -138,7 +138,7 @@
     }	
     ```
 
-    3.2. Creamos en `TasksScreen` la función Composable que va a contener el botón para añadir una tarea.
+    3.2. Creamos en `TasksScreen` la función Composable que va a contener el botón para añadir una tarea. -Check-
 
     ```
     @Composable
