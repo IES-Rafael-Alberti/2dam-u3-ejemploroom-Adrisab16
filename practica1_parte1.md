@@ -17,15 +17,15 @@
 	
     1.4. Realizar la llamada de la función Composable principal `TasksScreen` en `MainActivity`. -Check-
 	
-    1.5. Crear un fichero "Application" que nos servirá posteriormente para la "inyección de dependencias con Dagger Hilt" y "Room".
+    1.5. Crear un fichero "Application" que nos servirá posteriormente para la "inyección de dependencias con Dagger Hilt" y "Room". -Check-
 
-   Para ello, en la misma ubicación del `MainActivity`, creamos una clase de Kotlin con el nombre de nuestra aplicación, en este caso la vamos a llamar `TasksManageApp` y su contenido será el siguiente:  
+   Para ello, en la misma ubicación del `MainActivity`, creamos una clase de Kotlin con el nombre de nuestra aplicación, en este caso la vamos a llamar `TasksManageApp` y su contenido será el siguiente:  -Check-
 
     ```
-    class TasksManageApp : Application()
+    class TasksManageApp : Application() 
     ```
  
-    1.6. Para que funcione correctamente, tenemos que realizar cambios en el fichero `AndroidManifest.xml` e introducir el atributo de application `android:name` para indicarle cuál es mi clase Application:
+    1.6. Para que funcione correctamente, tenemos que realizar cambios en el fichero `AndroidManifest.xml` e introducir el atributo de application `android:name` para indicarle cuál es mi clase Application: -Check-
 
     ```
     <application
@@ -38,7 +38,7 @@
     </application>
     ```
 	
-    1.7. Por último, para terminar de crearnos nuestra arquitectura básica, vamos a crear el ViewModel. También lo ubicaremos en la carpeta `ui` de `addtasks` con el nombre `TasksViewModel` (class) que hereda de ViewModel:
+    1.7. Por último, para terminar de crearnos nuestra arquitectura básica, vamos a crear el ViewModel. También lo ubicaremos en la carpeta `ui` de `addtasks` con el nombre `TasksViewModel` (class) que hereda de ViewModel: -Check-
 
     ```
     class TasksViewModel : ViewModel() {
@@ -47,7 +47,7 @@
     
 2. **Implementar la inyección de dependencias con Dagger Hilt.**
 
-    2.1. En el gradle principal, `build.gradle.kts (Project)`, debemos insertar un nuevo plugin:
+    2.1. En el gradle principal, `build.gradle.kts (Project)`, debemos insertar un nuevo plugin: -Check-
 
     ```    
     plugins {
@@ -58,7 +58,7 @@
     }
     ```
 
-    2.2. En el gradle de la aplicación, build.gradle.kts (Module), debemos insertar las siguientes librerías:
+    2.2. En el gradle de la aplicación, build.gradle.kts (Module), debemos insertar las siguientes librerías: -Check-
 
    ```
     plugins {
@@ -83,9 +83,9 @@
     }
     ```
 
-    2.3. Ahora **SINCRONIZAMOS** el Gradle que hemos modificado ***(Sync Now)***.
+    2.3. Ahora **SINCRONIZAMOS** el Gradle que hemos modificado ***(Sync Now)***. -Check-
 	
-    2.4. Una vez sincronizado, ya podemos comenzar a incluir las anotaciones de **Dagger Hilt** que necesitamos.
+    2.4. Una vez sincronizado, ya podemos comenzar a incluir las anotaciones de **Dagger Hilt** que necesitamos. -Check-
 
     Primero actualizamos `TasksManageApp`:
 
@@ -94,7 +94,7 @@
     class TasksManageApp: Application()
     ```
     
-    2.5. En el fichero `MainActivity` incluimos la anotación ***@AndroidEntryPoint*** y crearemos la variable que pasaremos a nuestra Screen con el ViewModel de la misma:
+    2.5. En el fichero `MainActivity` incluimos la anotación ***@AndroidEntryPoint*** y crearemos la variable que pasaremos a nuestra Screen con el ViewModel de la misma: -Check-
 
     ```
     @AndroidEntryPoint
@@ -118,7 +118,7 @@
     }
     ```
     
-    2.6. Por último, vamos a ir al ViewModel e incluioms la anotación de Dagger Hilt para indicar que se trata de un ViewModel y añadimos a la clase la anotación de la inyección del constructor cómo indica la documentación de Dagger Hilt:
+    2.6. Por último, vamos a ir al ViewModel e incluimos la anotación de Dagger Hilt para indicar que se trata de un ViewModel y añadimos a la clase la anotación de la inyección del constructor cómo indica la documentación de Dagger Hilt: -Check-
 
     ```
     @HiltViewModel

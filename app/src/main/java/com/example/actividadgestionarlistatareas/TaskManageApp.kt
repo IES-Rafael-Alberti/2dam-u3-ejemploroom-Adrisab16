@@ -1,5 +1,7 @@
 package com.example.actividadgestionarlistatareas
 
 import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 
-class TasksManageApp : Application()
+@HiltAndroidApp
+class TasksManageApp: Application()
