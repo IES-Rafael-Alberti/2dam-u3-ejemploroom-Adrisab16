@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.Button
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -48,7 +47,6 @@ fun TasksScreen(tasksViewModel: TasksViewModel) {
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AddTasksDialog(
     show: Boolean,
@@ -95,11 +93,11 @@ fun AddTasksDialog(
 @Composable
 fun FabDialog(
     modifier: Modifier,
-    //Añadir una lambda
+    onNewTask: () -> Unit //Lambda añadido
 ) {
     FloatingActionButton(
         onClick = {
-            //Añadir un onnewtask
+            onNewTask() // OnNewTask añadido
         }, modifier = modifier.padding(16.dp)
     ) {
         Icon(Icons.Filled.Add, contentDescription = "")
